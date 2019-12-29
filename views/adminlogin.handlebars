@@ -1,0 +1,33 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Log In</title>
+		<link href="css/loginstyle.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="box">
+		<h1>Log In</h1>
+		<div class="error">
+		{{#if msg}}
+ 			<p class="msg"></p>{{msg}}</p>
+		{{/if}}
+		</div>
+		<form action="/adminlogin" method="post">
+		<div class="inputBox">
+			 <input type="text" name="user" value="{{user}}" required="" />
+                    <label>username</label>
+			</div>
+			<div class="inputBox">
+			<input type="password" name="pass" required="">
+			<label>password</label>
+			</div>
+			<input type="submit" value="Log in">
+			<input type="button" onclick="window.location.href = 'http://localhost:8080/register';" value="Register"/>
+
+		</form>
+		</div>
+	</body>
+</html>
